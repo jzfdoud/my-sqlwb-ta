@@ -83,6 +83,9 @@ set GPA = (gpa + (gpa* 0.1));
 
 -- 4) 'DELETE' practice- deleting multiple students
 -- looking for possible duplicates(my DB doesnt have duplicate students) 
+-- There was an issue with some on the select statement within the delete. Idea was to delete multiple students at the same time by having 'Where id in(....)'. 
+-- Gave error 1093- I found on MySQL documentation that this error is because MySQL doesnt allow you to "modify a table and select from the same table in a subquery" The work around is to create a derived table ("virtual/temp table")
+-- Can then select the derived table 
 select count(*)
 from student
 where lastname = 'Doud';
