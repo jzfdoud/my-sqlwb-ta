@@ -117,7 +117,7 @@ constraint requestId_productId unique (requestId, productId)
 Insert into requestLines
 (requestId,productId,quantity)
 Values
-(1,3,2),
+(1,6,2),
 (1,12,1);
 Select * from requestLines
 
